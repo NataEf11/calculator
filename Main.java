@@ -82,10 +82,22 @@ public class Main {
 
     public static String checkRim(int num) throws Exception {
         String result = "";
-        if (num <= 1)
-            throw new Exception("Недопустимый результат");
-        while (num > 0) {
-            if (num - 10 >= 0) {
+        if (num - 80 >= 0) {
+                result += "LXXX";
+                num -= 80;
+            } else if (num - 70 >= 0) {
+                result += "LXX";
+                num -= 70;
+            } else if (num - 60 >= 0) {
+                    result += "LX";
+                    num -= 60;
+            } else if (num - 50 >= 0) {
+                result += "L";
+                num -= 50;
+            } else if (num - 40 >= 0) {
+                result += "XL";
+                num -= 40;
+            } else if (num - 10 >= 0) {
                 result += "X";
                 num -= 10;
             } else if (num - 9 >= 0) {
